@@ -5,13 +5,10 @@ function App(){
 
   return(
     <div>
-      <div className='main-header'>
-        Drew's Portfolio
+      <div className='mx-auto w-150  text-xl font-medium text-black dark:text-white'>
+        Hello! I am Drew Brown, a Frontend Web Developer
       </div>
       <h2>
-        <strong>
-          Education
-        </strong>
         <Education />
       </h2>
       
