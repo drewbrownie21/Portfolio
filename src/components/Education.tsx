@@ -4,7 +4,7 @@ function Education(){
     const [buttonClick, setButtonClick] = useState(false);
 
     return(
-        <div className='university-information'>
+        <div className='university-information ml-5'>
             <button
                 className="font-bold bg-blue-700/75 hover:bg-slate-400/75 text-white font-bold py-2 px-4 rounded-full"
                 onClick={() => setButtonClick(!buttonClick)}
