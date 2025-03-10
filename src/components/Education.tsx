@@ -1,16 +1,12 @@
 import { useState } from "react";
+import Button from "./Button";
 
 function Education(){
     const [buttonClick, setButtonClick] = useState(false);
 
     return(
-        <div className='university-information ml-5'>
-            <button
-                className="font-bold bg-blue-700/75 hover:bg-slate-400/75 text-white font-bold py-2 px-4 rounded-full"
-                onClick={() => setButtonClick(!buttonClick)}
-            >
-                Education
-            </button>
+        <div className='university-information ml-20 mt-20'>
+            <Button buttonText={'Education'} isSelected={buttonClick} onToggle={setButtonClick} />
             <div
                 className={`mt-2 transition-all duration-300 ${
                     buttonClick ? "opacity-100 max-h-screen" : "opacity-0 max-h-0 overflow-hidden"
