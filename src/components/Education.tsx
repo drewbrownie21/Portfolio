@@ -5,7 +5,7 @@ function Education(){
     const [buttonClick, setButtonClick] = useState(false);
 
     return(
-        <div className='university-information ml-20 mt-20'>
+        <div className='university-information ml-20'>
             <Button buttonText={'Education'} isSelected={buttonClick} onToggle={setButtonClick} />
             <div
                 className={`mt-2 transition-all duration-300 ${
