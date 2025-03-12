@@ -1,9 +1,8 @@
 import "./App.css";
-import Education from "./components/Education";
 import myHeadshot from "./assets/drew.png";
 import githubIcon from "./assets/github-mark.svg";
-import Experience from "./components/Experience";
 import Header from "./components/Header";
+import History from "./components/History"
 
 function App() {
   return (
@@ -17,10 +16,7 @@ function App() {
         <Header />
         <img className="w-100 h-100 rounded-full" src={myHeadshot} />
       </div>
-      <h2>
-        <Education />
-        <Experience />
-      </h2>
+        <History />
     </div>
   );
 }

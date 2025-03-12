@@ -5,7 +5,7 @@ function Education() {
   const [buttonClick, setButtonClick] = useState(false);
 
   return (
-    <div className="university-information ml-20">
+    <div className="university-information">
       <Button
         buttonText={"Education"}
         isSelected={buttonClick}

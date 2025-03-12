@@ -5,7 +5,7 @@ function Experience() {
   const [isExperienceSelected, setIsExperiencedSelected] = useState(false);
 
   return (
-    <div className="experience-information ml-20 mt-40">
+    <div className="experience-information">
       <Button
         buttonText="Experience"
         isSelected={isExperienceSelected}
