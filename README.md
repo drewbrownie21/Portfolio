@@ -9,10 +9,10 @@ I am dedicated to crafting clean, maintainable, and efficient code to build high
 ### 🔧 Technologies & Tools I Use  
 - **Frontend**: React, TypeScript, JavaScript  
 - **Styling**: Tailwind CSS, CSS Modules  
-- **State Management**: React Context, Zustand, Redux (learning)  
-- **Build Tools**: Vite, Webpack  
+- **State Management**: React Context
+- **Build Tools**: Vite  
 - **Version Control**: Git, GitHub  
-- **Testing**: Jest, React Testing Library (learning)  
+- **Testing**: Jest, Cypress, React Testing Library (learning)  
 
 ## 📬 Get in Touch  
 
