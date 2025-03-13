@@ -2,7 +2,7 @@ import "./App.css";
 import myHeadshot from "./assets/drew.png";
 import githubIcon from "./assets/github-mark.svg";
 import Header from "./components/Header";
-import History from "./components/History"
+import History from "./components/History";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <img className="w-100 h-100 rounded-full" src={myHeadshot} />
       </div>
-        <History />
+      <History />
     </div>
   );
 }

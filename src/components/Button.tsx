@@ -1,15 +1,27 @@
 type ButtonProps = {
   buttonText: string;
-  isSelected: boolean;
-  onToggle: (newState: boolean) => void;
+  name: string;
+  activeState: string;
+  onToggle: (newState: string) => void;
 };
 
-function Button({ buttonText, isSelected, onToggle }: ButtonProps) {
+function Button({ buttonText, name, activeState, onToggle }: ButtonProps) {
+  function handleClick() {
+    console.log(name);
+    if (activeState == name) {
+      onToggle("");
+      console.log("this is the current state already!");
+    } else {
+      onToggle(name);
+    }
+  }
+
   return (
     <div>
       <button
         className="font-bold bg-blue-700/75 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full"
-        onClick={() => onToggle(!isSelected)}
+        name={name}
+        onClick={handleClick}
       >
         {buttonText}
       </button>

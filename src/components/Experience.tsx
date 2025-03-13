@@ -1,19 +1,22 @@
-import { useState } from "react";
 import Button from "./Button";
 
-function Experience() {
-  const [isExperienceSelected, setIsExperiencedSelected] = useState(false);
+type ExperienceProps = {
+  activeSection: string;
+  setActiveSection: (newState: string) => void;
+};
 
+function Experience({ activeSection, setActiveSection }: ExperienceProps) {
   return (
     <div className="experience-information">
       <Button
-        buttonText="Experience"
-        isSelected={isExperienceSelected}
-        onToggle={setIsExperiencedSelected}
+        buttonText={"Experience"}
+        name="experience"
+        activeState={activeSection}
+        onToggle={setActiveSection}
       />
       <div
         className={`mt-2 transition-all duration-300 ${
-          isExperienceSelected
+          activeSection == "experience"
             ? "opacity-100 max-h-screen"
             : "opacity-0 max-h-0 overflow-hidden"
         }`}

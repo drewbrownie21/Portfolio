@@ -1,19 +1,22 @@
-import { useState } from "react";
 import Button from "./Button";
 
-function Education() {
-  const [buttonClick, setButtonClick] = useState(false);
+type EducationProps = {
+  activeSection: string;
+  setActiveSection: (newState: string) => void;
+};
 
+function Education({ activeSection, setActiveSection }: EducationProps) {
   return (
     <div className="university-information">
       <Button
         buttonText={"Education"}
-        isSelected={buttonClick}
-        onToggle={setButtonClick}
+        name="education"
+        activeState={activeSection}
+        onToggle={setActiveSection}
       />
       <div
         className={`mt-2 transition-all duration-300 ${
-          buttonClick
+          activeSection == "education"
             ? "opacity-100 max-h-screen"
             : "opacity-0 max-h-0 overflow-hidden"
         }`}
