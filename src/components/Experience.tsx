@@ -15,7 +15,7 @@ function Experience({ activeSection, setActiveSection }: ExperienceProps) {
         onToggle={setActiveSection}
       />
       <div
-        className={`mt-2 transition-all duration-300 ${
+        className={`absolute transition-all duration-300 ${
           activeSection == "experience"
             ? "opacity-100 max-h-screen"
             : "opacity-0 max-h-0 overflow-hidden"

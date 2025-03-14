@@ -15,7 +15,7 @@ function Education({ activeSection, setActiveSection }: EducationProps) {
         onToggle={setActiveSection}
       />
       <div
-        className={`mt-2 transition-all duration-300 ${
+        className={`absolute transition-all duration-300 ${
           activeSection == "education"
             ? "opacity-100 max-h-screen"
             : "opacity-0 max-h-0 overflow-hidden"
