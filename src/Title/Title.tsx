@@ -1,6 +1,6 @@
 import myHeadshot from "../assets/drew.png";
 
-function Header() {
+function Title() {
   return (
     <div className="flex items-center justify-center space-x-10 p-30">
       <div className="text-xl font-medium">
@@ -11,4 +11,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Title;
