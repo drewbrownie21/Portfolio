@@ -5,7 +5,7 @@ function Projects() {
   const [activeSection, setActiveSection] = useState("");
 
   return (
-    <div className="absolute top-5 right-10">
+    <div>
       <Button
         buttonText={"Projects"}
         name="projects"

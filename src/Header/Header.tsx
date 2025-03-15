@@ -1,15 +1,21 @@
 import githubIcon from "../assets/github-mark.svg";
+import linkedin from "../assets/linkedin.png";
 import Projects from "./Projects";
 
 function Header() {
   return (
-    <div>
+    <div className="flex items-center justify-end">
       <Projects />
-      <h1 className="absolute top-5 right-5">
+      <div>
         <a href="https://github.com/drewbrownie21">
           <img className="w-10 h-10" src={githubIcon} />
         </a>
-      </h1>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/andrew-b-028b8793/">
+          <img className="w-12 h-10" src={linkedin} />
+        </a>
+      </div>
     </div>
   );
 }
