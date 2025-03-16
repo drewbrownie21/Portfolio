@@ -4,7 +4,7 @@ import Projects from "./Projects";
 
 function Header() {
   return (
-    <div className="flex items-center justify-end">
+    <div className="flex items-center justify-end py-2 px-2">
       <Projects />
       <div>
         <a href="https://github.com/drewbrownie21">
