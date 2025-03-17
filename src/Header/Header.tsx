@@ -1,6 +1,6 @@
 import githubIcon from "../assets/github-mark.svg";
 import linkedin from "../assets/linkedin.png";
-import Projects from "./Projects";
+import Projects from "./ProjectsButton";
 
 function Header() {
   return (

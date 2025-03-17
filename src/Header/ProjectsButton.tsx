@@ -1,8 +1,10 @@
 import Button from "../components/Button";
 import { useState } from "react";
 
-function Projects() {
+function ProjectsButton() {
   const [activeSection, setActiveSection] = useState("");
+
+  console.log(activeSection);
 
   return (
     <div>
@@ -16,4 +18,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsButton;
