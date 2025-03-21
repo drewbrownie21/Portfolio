@@ -6,6 +6,6 @@ export default defineConfig({
   base: "/Portfolio/",
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: "dist"
-  }
+    outDir: "dist",
+  },
 });

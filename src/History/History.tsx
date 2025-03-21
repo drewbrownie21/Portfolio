@@ -6,16 +6,18 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
 
   return (
-    <div className="flex items-center justify-center">
-      <Education
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-      />
-      <Experience
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-      />
-      <div>
+    <div>
+      <div className="flex items-center justify-center">
+        <Education
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+        />
+        <Experience
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+        />
+      </div>
+      <div className="flex items-center justify-center py-20">
         <div
           className={`absolute transition-all duration-900 ${
             activeSection == "education"
