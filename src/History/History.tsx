@@ -40,6 +40,7 @@ function App() {
         >
           <h1>Quality Engineer - Ridgeline - March 2024 to Present</h1>
           <h2>Software Test Engineer - School Pathways</h2>
+          <h3>Sotware Quality Assurance Engineer - Scientific Games</h3>
         </div>
       </div>
     </div>
