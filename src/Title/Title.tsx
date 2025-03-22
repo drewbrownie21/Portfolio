@@ -6,7 +6,7 @@ function Title() {
       <div className="text-xl font-medium">
         Drew Brown, Frontend Web Developer
       </div>
-      <img className="w-100 h-100 rounded-full" src={myHeadshot} />
+      <img className="w-full h-auto max-w-[150px] sm:max-w-[200px] md:max-w-[250px] lg:max-w-[300px] xl:max-w-[350px] rounded-full" src={myHeadshot} />
     </div>
   );
 }
