@@ -1,7 +1,11 @@
 import Button from "../components/Button";
 import { useState } from "react";
 
-function ProjectsButton() {
+interface HeaderProps {
+  projectsRef: React.RefObject<HTMLDivElement | null>;
+}
+
+function ProjectsButton({ projectsRef }: HeaderProps) {
   const [activeSection, setActiveSection] = useState("");
 
   console.log(activeSection);
@@ -13,6 +17,7 @@ function ProjectsButton() {
         name="projects"
         activeState={activeSection}
         onToggle={setActiveSection}
+        projectsRef={projectsRef}
       />
     </div>
   );
