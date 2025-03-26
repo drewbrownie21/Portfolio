@@ -11,7 +11,7 @@ function BaseballSimMain() {
         name="baseball-sim"
         activeState={activeSection}
         onToggle={setActiveSection}
-      />{" "}
+      />
     </div>
   );
 }
