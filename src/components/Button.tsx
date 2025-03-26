@@ -21,7 +21,7 @@ function Button({ buttonText, name, activeState, onToggle, projectsRef }: Button
   return (
     <div>
       <button
-        className="font-bold mr-10 bg-blue-700/75 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full"
+        className="font-bold mr-10 bg-blue-700/75 hover:bg-blue-400 text-white py-2 px-4 rounded-full"
         name={name}
         onClick={handleClick}
       >

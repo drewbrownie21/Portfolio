@@ -1,7 +1,7 @@
 import "./App.css";
 import Title from "./Title/Title";
 import Header from "./Header/Header";
-import History from "./History/History";
+import Background from "./Background/Background";
 import Projects from "./Projects/Projects";
 import { useRef } from "react";
 
@@ -12,7 +12,7 @@ function App() {
     <div className="bg-neutral-100 min-h-screen text-black font-mono">
       <Header projectsRef={projectsRef}/>
       <Title />
-      <History />
+      <Background />
       <Projects ref={projectsRef}/>
     </div>
   );
