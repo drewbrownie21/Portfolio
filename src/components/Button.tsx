@@ -1,25 +1,11 @@
 type ButtonProps = {
   buttonText: string;
   name: string;
-  activeState: string;
-  onToggle: (newState: string) => void;
   projectsRef?: React.RefObject<HTMLDivElement | null>;
 };
 
-function Button({
-  buttonText,
-  name,
-  activeState,
-  onToggle,
-  projectsRef,
-}: ButtonProps) {
+function Button({ buttonText, name, projectsRef }: ButtonProps) {
   function handleClick() {
-    if (activeState == name) {
-      onToggle("");
-    } else {
-      onToggle(name);
-    }
-
     if (projectsRef?.current) {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
     }
