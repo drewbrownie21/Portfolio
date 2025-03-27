@@ -7,7 +7,7 @@ interface HeaderProps {
 
 function ProjectsButton({ projectsRef }: HeaderProps) {
   const [activeSection, setActiveSection] = useState("");
-  
+
   return (
     <div>
       <Button

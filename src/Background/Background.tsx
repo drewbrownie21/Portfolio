@@ -1,19 +1,12 @@
-import { useState } from "react";
 import Skills from "./Skills";
 import Experience from "./Experience";
 
 function Background() {
-  const [activeSection, setActiveSection] = useState("");
-
   return (
     <div>
-      <div className="flex items-center justify-center">
-        <Skills
-        />
-        <Experience
-          activeSection={activeSection}
-          setActiveSection={setActiveSection}
-        />
+      <div className="flex items-stretch justify-center gap-4 max-w-6xl mx-auto">
+        <Skills />
+        <Experience />
       </div>
     </div>
   );

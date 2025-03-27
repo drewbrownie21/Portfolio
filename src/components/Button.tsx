@@ -3,9 +3,16 @@ type ButtonProps = {
   name: string;
   activeState: string;
   onToggle: (newState: string) => void;
-  projectsRef?: React.RefObject<HTMLDivElement | null>;};
+  projectsRef?: React.RefObject<HTMLDivElement | null>;
+};
 
-function Button({ buttonText, name, activeState, onToggle, projectsRef }: ButtonProps) {
+function Button({
+  buttonText,
+  name,
+  activeState,
+  onToggle,
+  projectsRef,
+}: ButtonProps) {
   function handleClick() {
     if (activeState == name) {
       onToggle("");
@@ -13,8 +20,8 @@ function Button({ buttonText, name, activeState, onToggle, projectsRef }: Button
       onToggle(name);
     }
 
-    if(projectsRef?.current){
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (projectsRef?.current) {
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
 

@@ -10,10 +10,10 @@ function App() {
 
   return (
     <div className="bg-neutral-100 min-h-screen text-black font-mono">
-      <Header projectsRef={projectsRef}/>
+      <Header projectsRef={projectsRef} />
       <Title />
       <Background />
-      <Projects ref={projectsRef}/>
+      <Projects ref={projectsRef} />
     </div>
   );
 }

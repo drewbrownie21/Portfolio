@@ -9,7 +9,7 @@ interface HeaderProps {
 function Header({ projectsRef }: HeaderProps) {
   return (
     <div className="flex items-center justify-end py-2 px-2">
-      <ProjectsButton projectsRef={projectsRef}/>
+      <ProjectsButton projectsRef={projectsRef} />
       <div>
         <a href="https://github.com/drewbrownie21">
           <img className="w-10 h-10" src={githubIcon} />
