@@ -42,15 +42,12 @@ function Experience() {
         Experience
       </h1>
       <div className="leading-relaxed">
-        <h1>Ridgeline</h1>
+        <h1>{jobs[selection].company}</h1>
         <div>
           <p className="text-lg font-semibold">Quality Engineer II</p>
           • Write automation tests with Cypress and Karate <br />
           • Triage daily automation run failures <br />• Fix minor bugs on the
           frontend and help maintain code base
-        </div>
-        <div>
-          {jobs[selection].company}
         </div>
         <button className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-300 hover:bg-gray-400 active:bg-gray-500"
           onClick={() => handleCount(1)}
