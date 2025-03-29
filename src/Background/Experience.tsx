@@ -1,3 +1,24 @@
+const jobs = [
+  {
+    company : "Ridgeline",
+    jobTitle: "Quality Engineer II",
+    duties: [
+      "Write automation tests with Cypress and Karate",
+      "Triage daily automation run failures",
+      "Fix minor bugs on the frontend and help maintain code base"
+    ]
+  },
+  {
+    company : "School Pathways",
+    jobTitle: "Software Test Engineer",
+    duties: [
+      "Created automated test suite utilizing Cypress and Selenium",
+      "Wrote API-level tests using Python and pytest",
+      "Reduced deploy test time 86%, improving efficiency and accelerating the release cycle through automated testing."
+    ]
+  }
+]
+
 function Experience() {
   return (
     <div
