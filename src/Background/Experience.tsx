@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const jobs = [
   {
     company : "Ridgeline",
@@ -20,6 +22,17 @@ const jobs = [
 ]
 
 function Experience() {
+  const [selection, setSelection] = useState(0)
+
+  function handleCount(countInt: number){
+    console.log(selection)
+    if(selection == jobs.length - 1){
+      setSelection(0)
+    }else{
+      setSelection(selection + countInt)
+    }
+  }
+
   return (
     <div
       title="skills-information"
@@ -36,6 +49,14 @@ function Experience() {
           • Triage daily automation run failures <br />• Fix minor bugs on the
           frontend and help maintain code base
         </div>
+        <div>
+          {jobs[selection].company}
+        </div>
+        <button className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-300 hover:bg-gray-400 active:bg-gray-500"
+          onClick={() => handleCount(1)}
+        >
+  {/* You can place an icon inside, like a left or right arrow */}
+</button>
       </div>
     </div>
   );
