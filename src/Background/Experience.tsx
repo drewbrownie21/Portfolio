@@ -42,11 +42,13 @@ const jobs: Jobs[] = [
 
 function Experience() {
   const [selection, setSelection] = useState(0);
+  const [flipped, setFlipped] = useState(false);
 
   function handleCount(countInt: number) {
     if (selection == jobs.length - 1) {
       setSelection(0);
     } else {
+      setFlipped(!flipped)
       setSelection(selection + countInt);
     }
   }
@@ -54,6 +56,8 @@ function Experience() {
   return (
     <div
       className="flex-1 bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl"
+      onClick={() => handleCount(1)}
+
     >
       <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
         Experience
@@ -71,26 +75,6 @@ function Experience() {
             <li key={index}>• {item}</li>
           ))}
         </ul>
-        <button
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-700/75 hover:bg-blue-400 active:bg-gray-500"
-          onClick={() => handleCount(1)}
-        >
-          <svg
-            className="w-6 h-6 text-blue-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 8 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
-            />
-          </svg>
-        </button>
       </div>
     </div>
   );
