@@ -48,7 +48,7 @@ function Experience() {
     if (selection == jobs.length - 1) {
       setSelection(0);
     } else {
-      setFlipped(!flipped)
+      setFlipped(!flipped);
       setSelection(selection + countInt);
     }
   }
@@ -57,7 +57,6 @@ function Experience() {
     <div
       className="flex-1 bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl"
       onClick={() => handleCount(1)}
-
     >
       <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
         Experience
