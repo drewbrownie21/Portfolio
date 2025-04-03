@@ -44,36 +44,53 @@ function Experience() {
   const [selection, setSelection] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
-  function handleCount(countInt: number) {
+  function handleCount() {
+    setFlipped(!flipped);
     if (selection == jobs.length - 1) {
       setSelection(0);
     } else {
-      setFlipped(!flipped);
-      setSelection(selection + countInt);
+      setSelection(selection + 1);
     }
+  }
+
+  function CardDetails() {
+    return (
+      <div>
+        <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
+          Experience
+        </h1>
+        <div className="leading-relaxed">
+          <h2 className="flex flex-row justify-between items-center mx-auto">
+            <div className="text-left">{jobs[selection].company}</div>
+            <div className="text-right">{jobs[selection].dateRange}</div>
+          </h2>
+          <div>
+            <p className="text-lg font-semibold">{jobs[selection].jobTitle}</p>
+          </div>
+          <ul>
+            {jobs[selection].duties.map((item, index) => (
+              <li key={index}>• {item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
   }
 
   return (
     <div
-      className="flex-1 bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl"
-      onClick={() => handleCount(1)}
+      className="size-92 outline-none [perspective:100rem]"
+      onClick={handleCount}
     >
-      <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
-        Experience
-      </h1>
-      <div className="leading-relaxed">
-        <h2 className="flex flex-row justify-between items-center mx-auto">
-          <div className="text-left">{jobs[selection].company}</div>
-          <div className="text-right">{jobs[selection].dateRange}</div>
-        </h2>
-        <div>
-          <p className="text-lg font-semibold">{jobs[selection].jobTitle}</p>
+      <div
+        className={`relative size-full transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+      >
+        <div className="absolute inset-0 size-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl [backface-visibility:hidden]">
+          <CardDetails />
         </div>
-        <ul>
-          {jobs[selection].duties.map((item, index) => (
-            <li key={index}>• {item}</li>
-          ))}
-        </ul>
+        <div className="absolute inset-0 size-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <CardDetails />
+        </div>
       </div>
     </div>
   );
