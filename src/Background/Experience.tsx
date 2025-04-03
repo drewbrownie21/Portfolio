@@ -79,7 +79,7 @@ function Experience() {
 
   return (
     <div
-      className="size-92 outline-none [perspective:100rem]"
+      className="flex-1 outline-none [perspective:100rem]"
       onClick={handleCount}
     >
       <div
