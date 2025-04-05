@@ -44,12 +44,12 @@ function Experience() {
   const [selection, setSelection] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
-  function handleCount() {
+  function handleCount(count:number) {
     setFlipped(!flipped);
     if (selection == jobs.length - 1) {
       setSelection(0);
     } else {
-      setSelection(selection + 1);
+      setSelection(selection + count);
     }
   }
 
@@ -80,7 +80,7 @@ function Experience() {
   return (
     <div
       className="flex-1 outline-none [perspective:100rem]"
-      onClick={handleCount}
+      onClick={() => handleCount(1)}
     >
       <div
         className={`relative size-full transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
