@@ -44,7 +44,7 @@ function Experience() {
   const [selection, setSelection] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
-  function handleCount(count:number) {
+  function handleCount(count: number) {
     setFlipped(!flipped);
     if (selection == jobs.length - 1) {
       setSelection(0);
@@ -55,7 +55,7 @@ function Experience() {
 
   function CardDetails() {
     return (
-      <div>
+      <section>
         <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
           Experience
         </h1>
@@ -73,12 +73,12 @@ function Experience() {
             ))}
           </ul>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div
+    <section
       className="flex-1 outline-none [perspective:100rem]"
       onClick={() => handleCount(1)}
     >
@@ -92,7 +92,7 @@ function Experience() {
           <CardDetails />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -9,12 +9,12 @@ function App() {
   const projectsRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="bg-neutral-100 min-h-screen text-black font-mono">
+    <main className="bg-neutral-100 min-h-screen text-black font-mono">
       <Header projectsRef={projectsRef} />
       <Title />
       <Background />
       <Projects ref={projectsRef} />
-    </div>
+    </main>
   );
 }
 

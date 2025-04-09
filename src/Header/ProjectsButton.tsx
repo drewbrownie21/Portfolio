@@ -6,13 +6,13 @@ interface HeaderProps {
 
 function ProjectsButton({ projectsRef }: HeaderProps) {
   return (
-    <div>
+    <article>
       <Button
         buttonText={"Projects"}
         name="projects"
         projectsRef={projectsRef}
       />
-    </div>
+    </article>
   );
 }
 

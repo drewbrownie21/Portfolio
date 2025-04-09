@@ -12,7 +12,7 @@ function Button({ buttonText, name, projectsRef }: ButtonProps) {
   }
 
   return (
-    <div>
+    <article>
       <button
         className="font-bold mr-10 bg-blue-700/75 hover:bg-blue-400 text-white py-2 px-4 rounded-full"
         name={name}
@@ -20,7 +20,7 @@ function Button({ buttonText, name, projectsRef }: ButtonProps) {
       >
         {buttonText}
       </button>
-    </div>
+    </article>
   );
 }
 
