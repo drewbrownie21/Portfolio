@@ -29,8 +29,8 @@ const jobs: Jobs[] = [
     ],
   },
   {
-    company: "Scientifc Games",
-    jobTitle: "Software Quality Assuance Engineer",
+    company: "Scientific Games",
+    jobTitle: "Software Quality Assurance Engineer",
     dateRange: "2019 - 2021",
     duties: [
       "Tested games to ensure the final product was compliant and ready for field use.",
@@ -78,20 +78,23 @@ function Experience() {
   }
 
   return (
-    <section
-      className="flex-1 outline-none [perspective:100rem]"
-      onClick={() => handleCount(1)}
-    >
-      <div
-        className={`relative size-full transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
-      >
-        <div className="absolute inset-0 size-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl [backface-visibility:hidden]">
-          <CardDetails />
-        </div>
-        <div className="absolute inset-0 size-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 max-w-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <CardDetails />
-        </div>
-      </div>
+<section
+  className="flex-1 w-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 overflow-hidden min-h-[300px]"
+  onClick={() => handleCount(1)}
+>
+<div
+  className={`relative w-full h-full transition duration-500 [transform-style:preserve-3d] ${
+    flipped ? "[transform:rotateY(180deg)]" : ""
+  }`}
+>
+  <div className="absolute inset-0 w-full h-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 [backface-visibility:hidden]">
+    <CardDetails />
+  </div>
+
+  <div className="absolute inset-0 w-full h-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+    <CardDetails />
+  </div>
+</div>
     </section>
   );
 }
