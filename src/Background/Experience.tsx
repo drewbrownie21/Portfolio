@@ -4,7 +4,7 @@ type Jobs = {
   company: string;
   jobTitle: string;
   dateRange: string;
-  duties: String[];
+  duties: string[];
 };
 
 const jobs: Jobs[] = [
@@ -41,60 +41,42 @@ const jobs: Jobs[] = [
 ];
 
 function Experience() {
-  const [selection, setSelection] = useState(0);
-  const [flipped, setFlipped] = useState(false);
+  const [current, setCurrent] = useState(0);
 
-  function handleCount(count: number) {
-    setFlipped(!flipped);
-    if (selection == jobs.length - 1) {
-      setSelection(0);
-    } else {
-      setSelection(selection + count);
-    }
-  }
-
-  function CardDetails() {
-    return (
-      <section>
-        <h1 className="font-bold text-xl text-center border-b-2 border-blue-300 pb-2">
-          Experience
-        </h1>
-        <div className="leading-relaxed">
-          <h2 className="flex flex-row justify-between items-center mx-auto">
-            <div className="text-left">{jobs[selection].company}</div>
-            <div className="text-right">{jobs[selection].dateRange}</div>
-          </h2>
-          <div>
-            <p className="text-lg font-semibold">{jobs[selection].jobTitle}</p>
+  return (
+    <section className="flex-1 w-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 overflow-hidden min-h-[300px]">
+      <div className="flex flex-col justify-between h-full">
+        {/* Slide Content */}
+        <div>
+          <h1 className="text-xl font-bold text-center border-b-2 border-blue-300 pb-2">
+            Experience
+          </h1>
+          <div className="flex justify-between font-semibold mt-2">
+            <span>{jobs[current].company}</span>
+            <span>{jobs[current].dateRange}</span>
           </div>
-          <ul>
-            {jobs[selection].duties.map((item, index) => (
-              <li key={index}>• {item}</li>
+          <p className="text-lg font-semibold mt-1">{jobs[current].jobTitle}</p>
+          <ul className="list-disc list-inside mt-2 space-y-1 text-sm">
+            {jobs[current].duties.map((duty, idx) => (
+              <li key={idx}>{duty}</li>
             ))}
           </ul>
         </div>
-      </section>
-    );
-  }
 
-  return (
-<section
-  className="flex-1 w-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 overflow-hidden min-h-[300px]"
-  onClick={() => handleCount(1)}
->
-<div
-  className={`relative w-full h-full transition duration-500 [transform-style:preserve-3d] ${
-    flipped ? "[transform:rotateY(180deg)]" : ""
-  }`}
->
-  <div className="absolute inset-0 w-full h-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 [backface-visibility:hidden]">
-    <CardDetails />
-  </div>
-
-  <div className="absolute inset-0 w-full h-full bg-blue-100 text-blue-900 rounded-2xl shadow-md p-6 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-    <CardDetails />
-  </div>
-</div>
+        {/* Dots */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {jobs.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`w-2.5 h-2.5 rounded-full transition ${
+                index === current ? "bg-blue-600" : "bg-blue-300"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
