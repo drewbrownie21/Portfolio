@@ -10,7 +10,7 @@ type Jobs = {
 const jobs: Jobs[] = [
   {
     company: "Ridgeline",
-    jobTitle: "Quality Engineer II",
+    jobTitle: "Senior Quality Engineer",
     dateRange: "2024 - Current",
     duties: [
       "Write automation tests with Cypress and Karate.",
