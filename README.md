@@ -20,5 +20,5 @@ I am dedicated to crafting clean, maintainable, and efficient code to build high
 I’m always open to feedback, collaboration, and learning opportunities!
 
 - **Portfolio Website**: [Portfolio](https://drewbrownie21.github.io/Portfolio/)
-- **LinkedIn**: [https://www.linkedin.com/in/andrew-b-028b8793/](#)
+- **LinkedIn**(https://www.linkedin.com/in/andrew-b-028b8793/)
 - **Email**: drew.tjbrown@gmail.com
