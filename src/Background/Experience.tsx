@@ -13,9 +13,9 @@ const jobs: Jobs[] = [
     jobTitle: "Senior Quality Engineer",
     dateRange: "2024 - Current",
     duties: [
-      "Write automation tests with Cypress and Karate.",
-      "Triage daily automation run failures.",
-      "Fix minor bugs on the frontend and help maintain code base.",
+      "Developed and maintained automated test suites using Cypress and Karate, contributing to a robust CI/CD pipeline.",
+      "Investigated and debugged daily automation failures, identifying root causes in both frontend and backend code.",
+      "Implemented bug fixes and enhancements in the frontend application, collaborating with developers to improve code quality and maintainability.",
     ],
   },
   {
