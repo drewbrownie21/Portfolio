@@ -19,6 +19,8 @@ I am dedicated to crafting clean, maintainable, and efficient code to build high
 
 I’m always open to feedback, collaboration, and learning opportunities!
 
-- **Portfolio Website**: [https://drewbrownie21.github.io/Portfolio/](#)
-- **LinkedIn**: [https://www.linkedin.com/in/andrew-b-028b8793/](#)
-- **Email**: drew.tjbrown@gmail.com
+## 🌐 Connect with Me
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://drewbrownie21.github.io/Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andrew-b-028b8793/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:drew.tjbrown@gmail.com)
+
